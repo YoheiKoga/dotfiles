@@ -3,6 +3,7 @@ if &compatible
   set nocompatible
 endif
 " directory of dein.vim
+" auto install dein itself
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -32,6 +33,9 @@ endif
 if dein#check_install()
   call dein#install()
 endif
+
+let g:seoul256_background = 234
+colo seoul256
 " }}}
 
 
@@ -49,7 +53,10 @@ set tabstop=2 "インデントをスペース4つ分に設定
 set smartindent "オートインデント
 set shiftwidth=2 "自動インデントでずれる幅
 set autoindent "改行時に前の行のインデントを継続する
+set mouse-=a "off mouse
+set nowrap "stop line breaking
 vnoremap v $h
+
 
 
 "#####検索設定#####
@@ -63,3 +70,4 @@ set wrapscan "検索時に最後まで行ったら最初に戻る
 "inoremap ( ()<Left>
 "inoremap  <Left>
 "inoremap ' ''<Left>
+
