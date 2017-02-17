@@ -1,0 +1,35 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'elmcast/elm-vim'
+on_ft = 'elm'
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]] # scala syntax
+repo = 'derekwyatt/vim-scala'
+on_ft = 'scala'
+
+[[plugins]] # color scheme
+repo = 'junegunn/seoul256.vim'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+# file browser NERDTreeToggle
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# taglist.vim
+[[plugins]]
+repo = 'vim-scripts/taglist.vim'
