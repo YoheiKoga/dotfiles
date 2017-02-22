@@ -155,7 +155,7 @@ set wrapscan "検索時に最後まで行ったら最初に戻る
 "inoremap ( ()<Left>
 "inoremap  <Left>
 "inoremap ' ''<Left>
-
+inoremap {<Enter> {<CR>}<ESC><S-o>
 
 "##### Buffer #####
 set autoread "外部ファイルが変更されたら自動で読み直す
