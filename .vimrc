@@ -119,7 +119,8 @@ map <silent> <C-l> :TlistToggle<CR>
 
 
 
-
+" deoplete config , python3
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 
 
