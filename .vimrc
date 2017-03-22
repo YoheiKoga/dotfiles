@@ -134,7 +134,7 @@ set title "編集中のファイル名を表示
 set showmatch "括弧入力時の対応する括弧を表示
 syntax on "コードの色分け
 set expandtab "to insert space characters the tab key is pressed
-set tabstop=2 "インデントをスペース4つ分に設定
+set tabstop=2 
 set smartindent "オートインデント
 set shiftwidth=2 "自動インデントでずれる幅
 set smarttab "空白文字をいい感じで挿入する
@@ -143,11 +143,50 @@ set mouse-=a "off mouse
 set nowrap "stop line breaking
 vnoremap v $h
 
+"##### sキーへの画面分割割当######
+"##### 参考 http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca #####
+nnoremap s <Nop>    "disable substitute text(same as cl)
+nnoremap S <Nop>    "disable substitute line(same as cc)
+nnoremap sj <C-w>j                  "move window below
+nnoremap sk <C-w>k                  "move window above
+nnoremap sl <C-w>l                  "move window right
+nnoremap sh <C-w>h                  "move window left
+nnoremap sw <C-w>w                  "move window next
 
+"move window itself
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap sH <C-w>H
 
-"#####検索設定#####
+nnoremap sn gt      "move next tab
+nnoremap sp gT      "move previous tab
+nnoremap sr <C-w>r
+nnoremap s= <C-w>=
+nnoremap so <C-w>_<C-w>|
+nnoremap sO <C-w>=
+nnoremap sN :<C-u>bn<CR>
+nnoremap sP :<C-u>bp<CR>
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sT :<C-u>Unite tab<CR>
+nnoremap ss :<C-u>sp<CR>            "split holizontal
+nnoremap sv :<C-u>vs<CR>            "split vertical
+nnoremap sq :<C-u>q<CR>
+nnoremap sQ :<C-u>bd<CR>
+nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
+nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
+
+call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+call submode#map('bufmove', 'n', '', '<', '<C-w><')
+call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+
 set ignorecase "大文字/小文字の区別なく検索する
-set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
+"set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
 set wrapscan "検索時に最後まで行ったら最初に戻る
 
 " 括弧の自動入力設定はとりあえずコメントアウト
