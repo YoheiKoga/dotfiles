@@ -147,21 +147,23 @@ vnoremap v $h
 "##### 参考 http://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca #####
 nnoremap s <Nop>    "disable substitute text(same as cl)
 nnoremap S <Nop>    "disable substitute line(same as cc)
-nnoremap sj <C-w>j                  "move window below
-nnoremap sk <C-w>k                  "move window above
-nnoremap sl <C-w>l                  "move window right
-nnoremap sh <C-w>h                  "move window left
-nnoremap sw <C-w>w                  "move window next
+
+
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k 
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sw <C-w>w
 
 "move window itself
 nnoremap sJ <C-w>J
 nnoremap sK <C-w>K
 nnoremap sL <C-w>L
 nnoremap sH <C-w>H
-
-nnoremap sn gt      "move next tab
-nnoremap sp gT      "move previous tab
 nnoremap sr <C-w>r
+
+nnoremap sn gt
+nnoremap sp gT
 nnoremap s= <C-w>=
 nnoremap so <C-w>_<C-w>|
 nnoremap sO <C-w>=
@@ -169,8 +171,8 @@ nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sT :<C-u>Unite tab<CR>
-nnoremap ss :<C-u>sp<CR>            "split holizontal
-nnoremap sv :<C-u>vs<CR>            "split vertical
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
 nnoremap sq :<C-u>q<CR>
 nnoremap sQ :<C-u>bd<CR>
 nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
