@@ -117,10 +117,19 @@ let Tlist_Exit_OnlyWindow = 1
 "map <silent> <leader>E :TlistToggle<CR>      
 map <silent> <C-l> :TlistToggle<CR>
 
+" for tyru/caw.vim
+" comment out toggle shortcut by \c 
+nmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>c <Plug>(caw:hatpos:toggle)
+nmap <Leader>, <Plug>(caw:zeropos:toggle)
+vmap <Leader>, <Plug>(caw:zeropos:toggle)
 
 
 " deoplete config , python3
 let g:python3_host_prog = '/usr/local/bin/python3'
+
+" insert blank line by 0 key
+nnoremap 0 :<C-u>call append(expand('.'), '')<Cr>j
 
 
 
@@ -140,7 +149,8 @@ set shiftwidth=2 "自動インデントでずれる幅
 set smarttab "空白文字をいい感じで挿入する
 set autoindent "改行時に前の行のインデントを継続する
 set mouse-=a "off mouse
-set nowrap "stop line breaking
+"set nowrap "stop line breaking
+set wrap
 vnoremap v $h
 
 "##### sキーへの画面分割割当######

@@ -24,6 +24,10 @@ on_ft = 'scala'
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 
+[[plugins]] # rust syntax
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+
 [[plugins]] # color scheme
 repo = 'junegunn/seoul256.vim'
 
@@ -40,3 +44,7 @@ repo = 'scrooloose/nerdtree'
 # taglist.vim
 [[plugins]]
 repo = 'vim-scripts/taglist.vim'
+
+# caw.vim comment out toggle short cut
+[[plugins]]
+repo = 'tyru/caw.vim'
